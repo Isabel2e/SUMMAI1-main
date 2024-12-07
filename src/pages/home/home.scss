@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.home {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+
+    .box {
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid $soft-bg;
+    }
+
+    .box1 {
+        grid-column: span 2;
+        grid-row: span 2;
+        position: relative;
+    }
+
+    .box2 {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .box3 {
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+
+    // Responsivo para pantallas de hasta 768px (tabletas y móviles)
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas pequeñas
+
+        .box1 {
+            grid-column: span 2; // Deja box1 ocupando toda la fila
+        }
+
+        .box2, .box3 {
+            grid-column: span 2; // Las otras cajas ocupan toda la fila
+            grid-row: span 1; // Cada caja ocupa solo una fila
+        }
+    }
+
+    // Responsivo para pantallas de hasta 480px (móviles más pequeños)
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; // Una sola columna en pantallas muy pequeñas
+
+        .box1, .box2, .box3 {
+            grid-column: span 1; // Todas las cajas ocupan toda la fila
+            grid-row: span 1; // Cada caja ocupa solo una fila
+        }
+    }
+}

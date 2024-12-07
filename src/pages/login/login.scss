@@ -1,0 +1,137 @@
+
+
+@import "../../styles/variables.scss";
+
+body {
+  background: linear-gradient(to right, $soft-bg,$main-bg, $dark-bg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+.login-form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: 150px auto;
+  box-shadow: -25px 25px 25px rgba(0.5, 0.5, 0.5, 0.3);
+}
+
+.icon-container {
+  display: flex;                /* Activamos Flexbox */
+  justify-content: center;      /* Centrado horizontal */
+  align-items: center;          /* Centrado vertical */
+  height: 80px; 
+  padding-bottom: 10px;
+}
+
+.iconuser {
+  color: $dark-color;
+  font-size: 120px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: $dark-color;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: $dark-color;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 8px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid $soft-color;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: $soft-bg;
+  outline: none;
+}
+input::placeholder {
+    color: $medium-color;   // Cambiar color del texto del placeholder
+    font-size: 12px; // Cambiar el tamaño de la fuente
+  }
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: $soft-bg;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $dark-bg;
+  }
+
+  &:disabled {
+    background-color: $main-bg;
+    cursor: not-allowed;
+  }
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+
+  &.error {
+    color: $soft-color
+  }
+
+  &.success {
+    color: $soft-color;
+  }
+}
+
+@media (max-width: 600px) {
+    .login-form {
+      padding: 15px; /* Reduce el padding */
+      box-shadow: none; /* Elimina sombra en móviles */
+    }
+  
+    .login-container {
+      padding: 5px; /* Más espacio en los bordes */
+    }
+  
+    .login-form h2 {
+      font-size: 18px; /* Reduce el tamaño del título */
+    }
+  
+    .login-form button {
+      padding: 8px; /* Reduce el tamaño del botón */
+    }
+  }
+  
+  /* Media Query para pantallas medianas (tabletas) */
+  @media (max-width: 768px) {
+    .login-form {
+      max-width: 350px; /* Ajusta el ancho máximo */
+    }
+  }

@@ -1,0 +1,80 @@
+.topBox {
+    margin-bottom: 20px;
+}
+
+.keyword {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .keywordTitle {
+        font-weight: bold;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .keywordInfo {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 5px;
+
+        .resume {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .tone {
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        .numMention {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+// Media Query for Responsiveness (Mobile & Small Tablets)
+@media (max-width: 768px) {
+    .topBox {
+        padding: 0 10px;
+    }
+
+    .keyword {
+        margin-bottom: 10px; // Reduce bottom margin for mobile view
+
+        .keywordTitle {
+            font-size: 16px; // Make title text smaller on small screens
+        }
+
+        .keywordInfo {
+            font-size: 14px; // Make font size smaller for mobile devices
+            gap: 8px;
+
+            .resume,
+            .tone,
+            .numMention {
+                padding: 8px; // Reduce padding for smaller screens
+            }
+        }
+    }
+}
+
+// Media Query for Extra Small Devices (Mobile Portrait)
+@media (max-width: 480px) {
+    .keyword {
+        padding: 10px;
+
+        .keywordInfo {
+            font-size: 12px; // Even smaller font size on very small screens
+            gap: 6px;
+        }
+    }
+}

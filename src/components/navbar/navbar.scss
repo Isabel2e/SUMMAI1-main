@@ -1,0 +1,117 @@
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Aseguramos que los elementos se mantengan en fila y se ajusten al espacio disponible */
+    flex-wrap: wrap;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 10px;
+  
+      img {
+        width: 30px;  /* Ajustar el tamaño del logo */
+        height: auto;
+      }
+    }
+  
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        img {
+          width: 26px;  /* Ajustar tamaño del avatar */
+          height: 26px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  
+    // Media Query para pantallas pequeñas (max-width: 768px)
+    @media (max-width: 768px) {
+      padding: 10px 15px; /* Reducir el padding en pantallas pequeñas */
+      justify-content: space-between;
+      flex-wrap: wrap; /* Aseguramos que los elementos se ajusten en la misma fila */
+  
+      .logo {
+        width: auto;
+        gap: 5px;
+  
+        img {
+          width: 25px;  /* Reducir tamaño del logo */
+        }
+  
+        span {
+          font-size: 18px;  /* Reducir tamaño del texto */
+        }
+      }
+  
+      .icons {
+        gap: 15px; /* Ajustar el espacio entre los iconos */
+        justify-content: flex-end; /* Alineación hacia la derecha */
+      }
+  
+      .user {
+        img {
+          width: 22px; /* Reducir tamaño del avatar */
+          height: 22px;
+        }
+  
+        span {
+          font-size: 14px;  /* Reducir tamaño del texto */
+        }
+      }
+  
+      .icon {
+        width: 20px; /* Reducir tamaño de los iconos */
+        height: 20px;
+      }
+    }
+  
+    // Media Query para pantallas más pequeñas (max-width: 480px)
+    @media (max-width: 480px) {
+      .icons {
+        gap: 10px; /* Reducir espacio entre los íconos */
+      }
+  
+      .user {
+        img {
+          width: 20px; /* Reducir aún más el tamaño del avatar */
+          height: 20px;
+        }
+  
+        span {
+          font-size: 12px;  /* Reducir tamaño del texto aún más */
+        }
+      }
+  
+      .icon {
+        width: 18px; /* Reducir tamaño de los iconos */
+        height: 18px;
+      }
+    }
+  }
+  
+
+    .user{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }

@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  
+    span {
+      &:first-child {
+        font-weight: bold;
+      }
+  
+      &:last-child {
+        font-size: 14px;
+      }
+    }
+  
+    // Responsivo para pantallas pequeñas
+    @media (max-width: 768px) {
+      flex-direction: column; // Cambia el layout a vertical
+      align-items: center; // Centra los elementos
+  
+      span {
+        &:last-child {
+          font-size: 12px; // Ajusta el tamaño del texto
+          margin-top: 10px; // Agrega espacio entre los elementos
+        }
+      }
+    }
+  }
+  
