@@ -3,6 +3,7 @@ import ChartBox from "../../components/ChartBox/ChartBox"
 import TopBox from "../../components/topBox/TopBox"
 import InfoTable from "../../components/InformationTable/InfoTable"
 import "./home.scss"
+
 const Home = () => {
   return (
     <div className="home">

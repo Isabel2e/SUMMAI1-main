@@ -5,6 +5,7 @@ interface UserFormState {
   username: string;
   email: string;
   password: string;
+  re_password: string;
   role: string;
 }
 
@@ -13,6 +14,7 @@ const User: React.FC = () => {
     username: "",
     email: "",
     password: "",
+    re_password: "",
     role: "user",
   });
 
@@ -75,7 +77,7 @@ const User: React.FC = () => {
       }
 
       setSuccess("Usuario creado con éxito");
-      setFormData({ username: "", email: "", password: "", role: "user" });
+      setFormData({ username: "", email: "", password: "", re_password:"",  role: "user" });
     } catch (err: any) {
       setError(err.message || "Error de conexión con el servidor");
     } finally {
@@ -116,6 +118,17 @@ const User: React.FC = () => {
             id="password"
             name="password"
             value={formData.password}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="re_password">Confirmar Password:</label>
+          <input
+            type="re_password"
+            id="re_password"
+            name="re_password"
+            value={formData.re_password}
             onChange={handleInputChange}
             required
           />

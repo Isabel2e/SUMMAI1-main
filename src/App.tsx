@@ -47,6 +47,7 @@ function App() {
           path: "/settings",
           element: <Settings />
         },
+       
       ]
     },
     {

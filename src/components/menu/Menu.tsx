@@ -48,8 +48,6 @@ const Menu = () => {
           <img src="/home.svg" alt="Home" />
           <span className="listItemTitle">Homepage</span>
         </Link>
-
-        /* Solo muestra el componente 'Crear usuario' si el rol es 'admin' */
         {role === "admin" && (
           <Link to="/user" className="listItem">
             <img src="/profile.svg" alt="Profile" />
